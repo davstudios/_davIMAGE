@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.3
+
+- Versione UI letta automaticamente dal runtime Tauri.
+- Allineamento release alla strategia di incremento patch.
+
+## 1.1.2
+
+- La versione mostrata nell’interfaccia viene letta automaticamente dal runtime Tauri.
+- Added automatic runtime version display so the UI stays aligned with the app package version.
+
 ## 1.0.0
 
 First stable release of `_davIMAGE`.

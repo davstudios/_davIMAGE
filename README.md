@@ -1,76 +1,47 @@
 <div align="center">
-  <img src="src-tauri/icons/app-icon.png" width="112" alt="_davIMAGE icon">
 
 # _davIMAGE
 
-**Comprimi, converti e ottimizza immagini localmente, in modo veloce e sicuro.**  
-**Compress, convert and optimize images locally, quickly and safely.**
+**Toolbox immagini locale, veloce e multipiattaforma.**  
+**A fast, local and cross-platform image toolbox.**
 
-Windows · macOS · Linux · Local-first · Open source
+`v1.1.2`
 
-[![Italiano](https://img.shields.io/badge/Italiano-006EDB?style=for-the-badge)](#-italiano)
-[![English](https://img.shields.io/badge/English-141416?style=for-the-badge)](#-english)
+[Italiano](#italiano) · [English](#english)
 
 </div>
 
 ---
 
-# 🇮🇹 Italiano
+<a id="italiano"></a>
 
-_davIMAGE è un'app desktop multipiattaforma di **_davstudios** pensata per comprimere, ridimensionare, convertire e ottimizzare immagini senza caricarle online.
+## Italiano 🇮🇹
 
-L'idea è semplice: aggiungi una o migliaia di immagini, scegli lo strumento, controlli le impostazioni e avvii l'elaborazione. Tutto avviene **localmente sul computer**.
+_davIMAGE è un'app desktop per elaborare immagini **direttamente sul computer**, senza upload, account, pubblicità o limiti artificiali sul numero di file.
+
+È la seconda applicazione della suite `_davstudios` e condivide lo stesso design system, le stesse animazioni, il cambio tema/lingua e la stessa filosofia di `_davRENAME`.
 
 <p>
-  <a href="https://www.davstudios.it"><img src=".github/assets/website-it.svg" height="46" alt="Visita il sito"></a>
-  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-it.svg" height="46" alt="Comprami Un Caffè"></a>
+  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-it.svg" alt="Comprami Un Caffè" height="42"></a>
+  <a href="https://www.davstudios.it"><img src=".github/assets/website-it.svg" alt="Visita il sito" height="42"></a>
 </p>
 
-## Perché _davIMAGE
+### Cosa fa
 
-Molti servizi di conversione e compressione richiedono di caricare le immagini su un server. _davIMAGE nasce con un approccio diverso: elaborazione **locale**, batch processing e nessun account.
+- **Comprimi** immagini JPEG, PNG, WebP, AVIF e TIFF.
+- **Ridimensiona** per larghezza, altezza, dimensioni, percentuale, lato lungo/corto, Fit e Fill.
+- **Converti** in JPEG, PNG, WebP, AVIF e TIFF.
+- **Ritaglia e ruota** con coordinate precise.
+- **Watermark** batch con immagine, opacità, dimensione e posizione configurabili.
+- **Metadata** EXIF in sola lettura per fotocamera, obiettivo, data, GPS, software, copyright, orientamento e profilo ICC rilevato.
+- **Optimize for Web** con preset DAV: lato lungo massimo 1920 px, WebP, qualità 82.
+- **Batch processing** con coda, stato per file, annullamento e riepilogo delle dimensioni finali.
 
-```text
-3200 × 1800
-2.7 MB JPEG
+### Sicurezza dei file
 
-↓ Optimize for Web
+_davIMAGE segue una regola semplice: **l'originale non viene mai sovrascritto**.
 
-1920 × 1080
-WebP
-output ottimizzato
-```
-
-### Funzioni principali
-
-- selezione nativa di file e cartelle;
-- drag & drop;
-- scansione ricorsiva delle cartelle;
-- elaborazione batch con coda e stato per file;
-- compressione immagini;
-- ridimensionamento per larghezza, altezza, percentuale, lato lungo/corto, Fit e Fill;
-- preset per Full HD, 4K, Email, Avatar, Website e altri casi comuni;
-- conversione tra JPEG, PNG, WebP, AVIF e TIFF;
-- lettura BMP e conversione verso altri formati supportati;
-- ritaglio e rotazione;
-- watermark batch con immagine, opacità, dimensione e posizione configurabili;
-- lettura metadata EXIF;
-- rilevamento di fotocamera, obiettivo, data, GPS, software, copyright, orientamento e profilo ICC quando disponibili;
-- preset **Optimize for Web**;
-- riepilogo delle dimensioni prima e dopo l'elaborazione;
-- annullamento dei job in esecuzione;
-- naming sicuro dell'output senza sovrascrivere automaticamente gli originali;
-- interfaccia in italiano e inglese;
-- tema Sistema, Chiaro e Scuro.
-
-> **Nota:** cambiare il formato tramite _davIMAGE esegue una vera conversione del contenuto del file. Gli originali non vengono sovrascritti automaticamente.
-
-<details>
-<summary><strong>Sicurezza dei file</strong></summary>
-
-_davIMAGE è progettato per mantenere intatti i file originali.
-
-Ogni operazione genera un nuovo file con un nome descrittivo:
+Ogni operazione produce un nuovo file con suffisso descrittivo:
 
 ```text
 photo.jpg
@@ -80,25 +51,16 @@ photo.jpg
 → photo-web.webp
 ```
 
-Se un nome di destinazione esiste già, viene generato automaticamente un nuovo nome numerato invece di sovrascrivere il file esistente.
-
-</details>
+Se il nome esiste già, viene creato automaticamente un nuovo nome numerato.
 
 <details>
-<summary><strong>Privacy e filosofia locale</strong></summary>
+<summary><strong>Elaborazione e privacy</strong></summary>
 
-- nessun account;
-- nessun upload delle immagini;
-- nessuna elaborazione cloud;
-- nessuna telemetria integrata;
-- nessuna pubblicità;
-- nessun limite artificiale al numero di file imposto dall'app.
-
-Le immagini restano sul dispositivo durante l'intera elaborazione.
+Tutta l'elaborazione avviene localmente. L'app non invia immagini a server esterni e non contiene telemetria. I nuovi file vengono ricodificati senza copiare automaticamente i metadata EXIF; la modifica selettiva dei metadata verrà estesa in aggiornamenti futuri.
 
 </details>
 
-## Formati
+### Formati della release corrente
 
 | Formato | Input | Output | Stato |
 | --- | :---: | :---: | --- |
@@ -108,135 +70,63 @@ Le immagini restano sul dispositivo durante l'intera elaborazione.
 | AVIF | ✅ | ✅ | Supportato |
 | BMP | ✅ | — | Conversione verso altri formati |
 | TIFF | ✅ | ✅ | Supportato |
-| GIF | Rilevato | — | Elaborazione non disponibile |
-| HEIC / HEIF | Rilevato | — | Supporto codec da estendere |
+| GIF | Rilevato | — | Rilevato, elaborazione non disponibile |
+| HEIC / HEIF | Rilevato | — | Rilevato, supporto codec da estendere |
 
-Le GIF animate vengono rilevate ma non elaborate per evitare la perdita dei fotogrammi. Il supporto HEIC/HEIF potrà essere esteso in aggiornamenti futuri.
+### Piattaforme
 
-## Optimize for Web
+- Windows 10/11 x64
+- macOS Intel e Apple Silicon
+- Linux x64
 
-Il preset DAV per il web applica automaticamente una configurazione pensata per immagini moderne destinate a siti e applicazioni web:
+### Avvio in sviluppo
 
-- lato lungo massimo di 1920 px;
-- orientamento EXIF applicato;
-- conversione in WebP;
-- qualità 82;
-- output separato dall'originale.
-
-## Piattaforme
-
-| Sistema | Architettura | Pacchetto previsto |
-| --- | --- | --- |
-| Windows 10/11 | x64 | NSIS `.exe` |
-| macOS | Intel + Apple Silicon | Universal `.dmg` |
-| Linux | x64 | `.AppImage` / `.deb` |
-
-Le build di release vengono generate tramite GitHub Actions sui rispettivi sistemi operativi.
-
-## Installazione
-
-Per gli utenti finali, scarica il pacchetto adatto al tuo sistema dalla sezione **Releases** del repository e avvialo normalmente. Non è necessario installare Node.js, Rust o clonare il codice sorgente.
-
-## Sviluppo locale
-
-Requisiti: Node.js, Rust e i prerequisiti Tauri del sistema operativo.
+Con Node.js, Rust e i prerequisiti Tauri installati:
 
 ```bash
 npm install
 npm run desktop
 ```
 
-Test:
+Sono inclusi anche gli script `RUN-*` e `BUILD-*` specifici per sistema operativo.
 
-```bash
-npm test
-```
+### Note della release
 
-Build locale:
+La v1.0.0 è la prima release stabile di `_davIMAGE`. Le aree già previste per gli aggiornamenti futuri sono l'estensione del supporto HEIC/HEIF, l'elaborazione GIF animata e una gestione metadata ancora più avanzata.
 
-```bash
-npm run bundle
-```
-
-Gli artefatti vengono creati in `src-tauri/target/release/bundle/`.
-
-## Tecnologia
-
-_davIMAGE usa **Tauri 2** per l'app desktop, **Rust** per il backend e **JavaScript + Vite** per l'interfaccia. Il design e il motion system seguono l'identità visiva di `_davstudios` e condividono lo stesso linguaggio della suite `_dav`.
-
-## Licenza
-
-Distribuito con licenza **MIT**. Consulta [`LICENSE`](LICENSE).
-
-### Supporta _davstudios
-
-Se `_davIMAGE` ti è utile e vuoi sostenere lo sviluppo dei prossimi strumenti della suite, puoi offrirmi un caffè.
-
-<p>
-  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-it.svg" height="46" alt="Comprami Un Caffè"></a>
-  <a href="https://www.davstudios.it"><img src=".github/assets/website-it.svg" height="46" alt="Visita davstudios.it"></a>
-</p>
-
-<div align="right"><a href="#davimage">↑ Torna all'inizio</a></div>
+[↑ Torna in alto](#davimage)
 
 ---
 
-# 🇬🇧 English
+<a id="english"></a>
 
-_davIMAGE is a cross-platform desktop app by **_davstudios** designed to compress, resize, convert and optimize images without uploading them online.
+## English 🇬🇧
 
-The workflow is straightforward: add one image or thousands of them, choose a tool, review your settings and start processing. Everything stays **local on your computer**.
+_davIMAGE is a desktop application for processing images **directly on your computer**, with no uploads, accounts, ads or artificial file-count limits.
+
+It is the second application in the `_davstudios` suite and shares the same design system, motion language, theme/language transitions and product philosophy as `_davRENAME`.
 
 <p>
-  <a href="https://www.davstudios.it/en"><img src=".github/assets/website-en.svg" height="46" alt="Visit website"></a>
-  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-en.svg" height="46" alt="Buy Me A Coffee"></a>
+  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-en.svg" alt="Buy Me A Coffee" height="42"></a>
+  <a href="https://www.davstudios.it/en"><img src=".github/assets/website-en.svg" alt="Visit website" height="42"></a>
 </p>
 
-## Why _davIMAGE
+### What it does
 
-Many online image conversion and compression services require files to be uploaded to a server. _davIMAGE takes a different approach: **local processing**, batch workflows and no account.
+- **Compress** JPEG, PNG, WebP, AVIF and TIFF images.
+- **Resize** by width, height, dimensions, percentage, longest/shortest side, Fit and Fill.
+- **Convert** to JPEG, PNG, WebP, AVIF and TIFF.
+- **Crop & Rotate** with precise coordinates.
+- **Watermark** batches with configurable image, opacity, size and position.
+- **Metadata** read-only EXIF inspection for camera, lens, date, GPS, software, copyright, orientation and detected ICC profile.
+- **Optimize for Web** with the DAV preset: maximum 1920 px longest side, WebP, quality 82.
+- **Batch processing** with queue state, per-file status, cancellation and final size summary.
 
-```text
-3200 × 1800
-2.7 MB JPEG
+### File safety
 
-↓ Optimize for Web
+_davIMAGE follows one simple rule: **the original is never overwritten**.
 
-1920 × 1080
-WebP
-optimized output
-```
-
-### Main features
-
-- native file and folder selection;
-- drag & drop;
-- recursive folder scanning;
-- batch processing with queue and per-file status;
-- image compression;
-- resize by width, height, percentage, longest/shortest side, Fit and Fill;
-- presets for Full HD, 4K, Email, Avatar, Website and other common use cases;
-- conversion between JPEG, PNG, WebP, AVIF and TIFF;
-- BMP input with conversion to other supported formats;
-- crop and rotation;
-- batch watermarking with configurable image, opacity, size and position;
-- EXIF metadata inspection;
-- detection of camera, lens, date, GPS, software, copyright, orientation and ICC profile when available;
-- **Optimize for Web** preset;
-- before/after file-size summary;
-- cancellation of running jobs;
-- safe output naming without automatically overwriting original files;
-- Italian and English interface;
-- System, Light and Dark themes.
-
-> **Note:** changing format in _davIMAGE performs an actual conversion of the file contents. Original files are not overwritten automatically.
-
-<details>
-<summary><strong>File safety</strong></summary>
-
-_davIMAGE is designed to keep original files intact.
-
-Each operation creates a new file with a descriptive suffix:
+Every operation produces a new file with a descriptive suffix:
 
 ```text
 photo.jpg
@@ -246,25 +136,16 @@ photo.jpg
 → photo-web.webp
 ```
 
-If an output name already exists, the app automatically generates a new numbered filename instead of overwriting the existing file.
-
-</details>
+If the output name already exists, a new numbered name is generated automatically.
 
 <details>
-<summary><strong>Privacy and local-first approach</strong></summary>
+<summary><strong>Processing and privacy</strong></summary>
 
-- no account;
-- no image uploads;
-- no cloud processing;
-- no built-in telemetry;
-- no ads;
-- no artificial file-count limit imposed by the app.
-
-Your images stay on your device throughout processing.
+All processing happens locally. The app does not upload images to external servers and includes no telemetry. New files are re-encoded without automatically copying EXIF metadata; more advanced selective metadata handling is planned for future updates.
 
 </details>
 
-## Formats
+### Formats in the current release
 
 | Format | Input | Output | Status |
 | --- | :---: | :---: | --- |
@@ -274,73 +155,36 @@ Your images stay on your device throughout processing.
 | AVIF | ✅ | ✅ | Supported |
 | BMP | ✅ | — | Convert to another format |
 | TIFF | ✅ | ✅ | Supported |
-| GIF | Detected | — | Processing unavailable |
-| HEIC / HEIF | Detected | — | Codec support to be extended |
+| GIF | Detected | — | Detected, processing unavailable |
+| HEIC / HEIF | Detected | — | Detected, codec support to be extended |
 
-Animated GIF files are detected but not processed to avoid frame loss. HEIC/HEIF support may be expanded in future updates.
+### Platforms
 
-## Optimize for Web
+- Windows 10/11 x64
+- macOS Intel and Apple Silicon
+- Linux x64
 
-The DAV web preset automatically applies a configuration designed for modern website and web-app imagery:
+### Development
 
-- maximum 1920 px longest side;
-- EXIF orientation applied;
-- conversion to WebP;
-- quality 82;
-- output kept separate from the original file.
-
-## Platforms
-
-| System | Architecture | Planned package |
-| --- | --- | --- |
-| Windows 10/11 | x64 | NSIS `.exe` |
-| macOS | Intel + Apple Silicon | Universal `.dmg` |
-| Linux | x64 | `.AppImage` / `.deb` |
-
-Release builds are generated through GitHub Actions on the corresponding operating systems.
-
-## Installation
-
-For end users, download the package for your operating system from the repository's **Releases** section and launch it normally. Node.js, Rust, and the source repository are not required to use a compiled release.
-
-## Local development
-
-Requirements: Node.js, Rust, and the Tauri prerequisites for your operating system.
+With Node.js, Rust and the Tauri prerequisites installed:
 
 ```bash
 npm install
 npm run desktop
 ```
 
-Tests:
+Platform-specific `RUN-*` and `BUILD-*` scripts are included as well.
 
-```bash
-npm test
-```
+### Release notes
 
-Local build:
+v1.0.0 is the first stable release of `_davIMAGE`. Already planned areas for future updates include broader HEIC/HEIF support, animated GIF processing and more advanced metadata handling.
 
-```bash
-npm run bundle
-```
+[↑ Back to top](#davimage)
 
-Build artifacts are created under `src-tauri/target/release/bundle/`.
+---
 
-## Technology
+<div align="center">
 
-_davIMAGE uses **Tauri 2** for the desktop application, **Rust** for the backend, and **JavaScript + Vite** for the interface. Its visual language and motion system follow the `_davstudios` identity and are shared across the `_dav` suite.
+Built by **_davstudios** · MIT License
 
-## License
-
-Released under the **MIT License**. See [`LICENSE`](LICENSE).
-
-### Support _davstudios
-
-If `_davIMAGE` is useful to you and you would like to support the development of the next tools in the suite, you can buy me a coffee.
-
-<p>
-  <a href="https://buymeacoffee.com/davstudios"><img src=".github/assets/buy-coffee-en.svg" height="46" alt="Buy Me A Coffee"></a>
-  <a href="https://www.davstudios.it/en"><img src=".github/assets/website-en.svg" height="46" alt="Visit davstudios.it"></a>
-</p>
-
-<div align="right"><a href="#davimage">↑ Back to top</a></div>
+</div>

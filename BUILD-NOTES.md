@@ -1,4 +1,4 @@
-# _davIMAGE v1.0.0 build notes
+# _davIMAGE build notes
 
 ## Requirements
 

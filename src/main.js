@@ -2,6 +2,7 @@ import './styles.css';
 import './motion.css';
 import { basename, defaultOptions, formatBytes, formatReduction, previewOutputName, resizePreview } from './image-engine.js';
 import { invoke } from '@tauri-apps/api/core';
+import { getVersion } from '@tauri-apps/api/app';
 import { getCurrentWebview } from '@tauri-apps/api/webview';
 import { listen } from '@tauri-apps/api/event';
 import { open, message } from '@tauri-apps/plugin-dialog';
@@ -57,7 +58,8 @@ const state = {
   metadataLoading: false,
   thumbnail: null,
   thumbnailLoading: false,
-  reveal: 'startup'
+  reveal: 'startup',
+  appVersion: ''
 };
 
 const app = document.querySelector('#app');
@@ -139,7 +141,7 @@ function renderShell() {
       <main class="main">
         <header class="topbar">
           <div>
-            <div class="eyebrow">_davIMAGE · v1.0.0</div>
+            <div class="eyebrow">_davIMAGE${state.appVersion ? ` · v${escapeHtml(state.appVersion)}` : ''}</div>
             <h1>${state.page === 'settings' ? t('Impostazioni', 'Settings') : t(tool[0], tool[1])}</h1>
             <p class="top-subtitle">${state.page === 'settings' ? t('Preferenze dell’app e informazioni sulla build.', 'App preferences and build information.') : t(tool[2], tool[3])}</p>
           </div>
@@ -323,7 +325,7 @@ function renderSettings() {
       <div class="brand big">_dav<span>IMAGE</span></div>
       <p>${t('Toolbox immagini locale e multipiattaforma. Nessun account, nessuna pubblicità e nessun upload dei tuoi file.', 'Local cross-platform image toolbox. No account, no ads and no file uploads.')}</p>
       <div class="about-links"><button class="website-button" data-action="website">${icons.globe}<span>davstudios.it</span></button><button class="coffee-button wide" data-action="coffee">${icons.coffee}<span>${t('Comprami Un Caffè', 'Buy Me A Coffee')}</span></button></div>
-      <div class="version">v1.0.0 · ${t('Release stabile', 'Stable release')}</div>
+      <div class="version">${state.appVersion ? `v${escapeHtml(state.appVersion)} · ` : ''}${t('Release stabile', 'Stable release')}</div>
     </div>
     <div class="panel capability-card"><h2>${t('Stato formati', 'Format status')}</h2><div class="capability-list"><div><strong>JPEG / PNG / WebP / AVIF / BMP / TIFF</strong><span>${t('Lettura supportata; output disponibile per JPEG, PNG, WebP, AVIF e TIFF.', 'Input supported; output available for JPEG, PNG, WebP, AVIF and TIFF.')}</span></div><div><strong>GIF</strong><span>${t('Rilevato ma non elaborato per evitare perdita di frame.', 'Detected but not processed to avoid frame loss.')}</span></div><div><strong>HEIC / HEIF</strong><span>${t('Rilevato. Il supporto codec verrà esteso in aggiornamenti futuri.', 'Detected. Codec support will be extended in future updates.')}</span></div></div></div>
   </section>`;
@@ -630,8 +632,17 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeSelects();
 });
 
-applyTheme();
-renderShell();
+async function initializeApp() {
+  try {
+    state.appVersion = await getVersion();
+  } catch {
+    state.appVersion = '';
+  }
+  applyTheme();
+  renderShell();
+}
+
+initializeApp();
 
 getCurrentWebview().onDragDropEvent((event) => {
   const payload = event.payload;

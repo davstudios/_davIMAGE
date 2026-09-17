@@ -1,4 +1,4 @@
-_davIMAGE v1.0.0
+_davIMAGE v1.1.2
 Tests: 11
 Passed: 11
 Failed: 0
