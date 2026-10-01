@@ -1,23 +1,51 @@
-# _davIMAGE build notes
+# Build notes — _davIMAGE v26.10.1
 
-## Requirements
+## Requisiti
 
 - Node.js LTS
-- Rust 1.85 or newer
-- Tauri 2 platform prerequisites
+- npm
+- Rust 1.85 o superiore
+- prerequisiti Tauri 2 della piattaforma
 
-## Windows
+## Test
 
-Run `RUN-WINDOWS.bat` for development or `BUILD-WINDOWS.bat` for a bundle.
+```bash
+npm test
+```
 
-## macOS
+## Sviluppo desktop
 
-Run `./RUN-MACOS.sh` for development or `./BUILD-MACOS.sh` for a bundle.
+```bash
+npm install --no-audit --no-fund
+npm run desktop
+```
 
-## Linux
+## Bundle
 
-On Ubuntu/Debian first run `./INSTALL-LINUX-DEPS-UBUNTU.sh`, then `./RUN-LINUX.sh` or `./BUILD-LINUX.sh`.
+```bash
+npm run bundle
+```
 
-## Current limitations
+La v26.10.1 mantiene invariati il motore immagini locale, il backend Rust e i comportamenti della precedente release. Questa release adotta lo standard di versioning `_davstudios` `YY.M.REVISIONE`, standardizza i metadata del pacchetto e introduce la descrizione bilingue automatica delle GitHub Release.
 
-Animated GIF processing is intentionally unavailable to avoid frame loss. HEIC/HEIF files are detected, but full codec support is not bundled in this release. Metadata inspection is currently read-only.
+## Metadata bundle
+
+- Publisher: `_davstudios`
+- Homepage: `https://davstudios.it`
+- License: `MIT`
+- Copyright: `© 2026 _davstudios`
+- Identifier preservato: `studio.dav.image`
+- Categoria: `GraphicsAndDesign`
+- Debian section: `graphics`
+
+## Firma
+
+Le release attuali non usano certificati commerciali di firma Windows né Developer ID/notarizzazione Apple. Il README contiene le istruzioni per gli utenti che incontrano SmartScreen o Gatekeeper.
+
+## Limitazioni correnti
+
+L'elaborazione delle GIF animate resta intenzionalmente non disponibile per evitare perdita di frame. I file HEIC/HEIF vengono rilevati, ma il supporto codec completo non è incluso. L'ispezione metadata è attualmente in sola lettura.
+
+## Icone bundle
+
+Il set di icone Tauri esistente viene preservato senza modifiche.

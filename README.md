@@ -5,7 +5,7 @@
 **Toolbox immagini locale, veloce e multipiattaforma.**  
 **A fast, local and cross-platform image toolbox.**
 
-`v1.1.2`
+`v26.10.1`
 
 [Italiano](#italiano) · [English](#english)
 
@@ -73,6 +73,37 @@ Tutta l'elaborazione avviene localmente. L'app non invia immagini a server ester
 | GIF | Rilevato | — | Rilevato, elaborazione non disponibile |
 | HEIC / HEIF | Rilevato | — | Rilevato, supporto codec da estendere |
 
+
+## Installazione delle release GitHub non firmate
+
+Le release di `_davIMAGE` sono distribuite direttamente tramite GitHub e, al momento, non utilizzano certificati commerciali di code signing o notarizzazione Apple. Il codice sorgente è disponibile pubblicamente con licenza MIT.
+
+### Windows
+
+Windows SmartScreen può mostrare l'avviso **“Windows ha protetto il PC”** perché l'installer non è firmato con un certificato di publisher attendibile. Se hai scaricato il file dalla repository GitHub ufficiale di `_davstudios`, seleziona **Ulteriori informazioni** e poi **Esegui comunque**.
+
+### macOS
+
+Gatekeeper può impedire la prima apertura perché l'app non è firmata con Developer ID e non è notarizzata da Apple. Dopo aver tentato di aprire l'app, vai in **Impostazioni di Sistema → Privacy e Sicurezza**, individua il messaggio relativo a `_davIMAGE` e scegli **Apri comunque**.
+
+### Linux
+
+Per un'AppImage può essere necessario rendere il file eseguibile prima dell'avvio:
+
+```bash
+chmod +x _davIMAGE*.AppImage
+```
+
+Scarica sempre le release dalla repository GitHub ufficiale di `_davstudios`. Quando viene pubblicato un hash SHA-256, puoi usarlo per verificare l'integrità del file scaricato.
+
+## Informazioni pacchetto
+
+- Developer / Publisher: `_davstudios`
+- Homepage: https://davstudios.it
+- Licenza: MIT
+- Bundle identifier: `studio.dav.image`
+- Versione corrente: `26.10.1`
+
 ### Piattaforme
 
 - Windows 10/11 x64
@@ -92,7 +123,7 @@ Sono inclusi anche gli script `RUN-*` e `BUILD-*` specifici per sistema operativ
 
 ### Note della release
 
-La v1.0.0 è la prima release stabile di `_davIMAGE`. Le aree già previste per gli aggiornamenti futuri sono l'estensione del supporto HEIC/HEIF, l'elaborazione GIF animata e una gestione metadata ancora più avanzata.
+La v26.10.1 adotta il nuovo standard di versioning e packaging `_davstudios` senza modificare il motore di elaborazione immagini. La v1.0.0 rimane la prima release stabile di `_davIMAGE`; tra le aree future restano l'estensione del supporto HEIC/HEIF, l'elaborazione GIF animata e una gestione metadata ancora più avanzata.
 
 [↑ Torna in alto](#davimage)
 
@@ -158,6 +189,37 @@ All processing happens locally. The app does not upload images to external serve
 | GIF | Detected | — | Detected, processing unavailable |
 | HEIC / HEIF | Detected | — | Detected, codec support to be extended |
 
+
+## Installing unsigned GitHub releases
+
+`_davIMAGE` releases are distributed directly through GitHub and currently do not use a commercial code-signing certificate or Apple notarization. The source code is publicly available under the MIT License.
+
+### Windows
+
+Windows SmartScreen may display **“Windows protected your PC”** because the installer is not signed by a trusted publisher certificate. If you downloaded it from the official `_davstudios` GitHub repository, select **More info** and then **Run anyway**.
+
+### macOS
+
+Gatekeeper may block the first launch because the app is not signed with Developer ID and is not notarized by Apple. After attempting to open it, go to **System Settings → Privacy & Security**, locate the `_davIMAGE` notice and choose **Open Anyway**.
+
+### Linux
+
+An AppImage may need executable permission before launch:
+
+```bash
+chmod +x _davIMAGE*.AppImage
+```
+
+Always download releases from the official `_davstudios` GitHub repository. When a SHA-256 hash is published, you can use it to verify the integrity of the downloaded file.
+
+## Package information
+
+- Developer / Publisher: `_davstudios`
+- Homepage: https://davstudios.it
+- License: MIT
+- Bundle identifier: `studio.dav.image`
+- Current version: `26.10.1`
+
 ### Platforms
 
 - Windows 10/11 x64
@@ -177,7 +239,7 @@ Platform-specific `RUN-*` and `BUILD-*` scripts are included as well.
 
 ### Release notes
 
-v1.0.0 is the first stable release of `_davIMAGE`. Already planned areas for future updates include broader HEIC/HEIF support, animated GIF processing and more advanced metadata handling.
+v26.10.1 adopts the new `_davstudios` versioning and packaging standard without changing the image-processing engine. v1.0.0 remains the first stable `_davIMAGE` release; planned areas for future updates still include broader HEIC/HEIF support, animated GIF processing and more advanced metadata handling.
 
 [↑ Back to top](#davimage)
 
