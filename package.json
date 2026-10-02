@@ -1,6 +1,6 @@
 {
   "name": "davimage-app",
-  "version": "26.10.1",
+  "version": "26.10.2",
   "private": true,
   "type": "module",
   "description": "_davIMAGE — local batch image toolbox for Windows, macOS and Linux by _davstudios.",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.2
+- Updated the complete Tauri icon set in `src-tauri/icons` using the new official `icon.ico` asset.
+- Regenerated `32x32.png`, `128x128.png`, `128x128@2x.png`, `app-icon.png`, `icon.ico` and `icon.icns` to keep all app icons visually aligned across Windows, macOS and Linux.
+- Bumped release metadata and technical versions to `26.10.2` without changing the image-processing engine or application logic.
+
 ## 26.10.1
 
 - Adottato il nuovo standard di versioning `_davstudios` `YY.M.REVISIONE`.

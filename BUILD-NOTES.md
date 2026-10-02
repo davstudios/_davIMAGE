@@ -1,4 +1,4 @@
-# Build notes — _davIMAGE v26.10.1
+# Build notes — _davIMAGE v26.10.2
 
 ## Requisiti
 
@@ -26,7 +26,7 @@ npm run desktop
 npm run bundle
 ```
 
-La v26.10.1 mantiene invariati il motore immagini locale, il backend Rust e i comportamenti della precedente release. Questa release adotta lo standard di versioning `_davstudios` `YY.M.REVISIONE`, standardizza i metadata del pacchetto e introduce la descrizione bilingue automatica delle GitHub Release.
+La v26.10.2 mantiene invariati il motore immagini locale, il backend Rust e i comportamenti della precedente release. Questa release adotta lo standard di versioning `_davstudios` `YY.M.REVISIONE`, standardizza i metadata del pacchetto e introduce la descrizione bilingue automatica delle GitHub Release.
 
 ## Metadata bundle
 

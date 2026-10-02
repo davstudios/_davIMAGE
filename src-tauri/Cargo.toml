@@ -1,6 +1,6 @@
 [package]
 name = "davimage"
-version = "26.10.1"
+version = "26.10.2"
 description = "_davIMAGE — local batch image toolbox for Windows, macOS and Linux by _davstudios."
 authors = ["_davstudios"]
 license = "MIT"
