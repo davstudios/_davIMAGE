@@ -1,4 +1,4 @@
-# Build notes — _davIMAGE v26.10.2
+# Build notes — _davIMAGE v26.10.3
 
 ## Requisiti
 
@@ -26,7 +26,7 @@ npm run desktop
 npm run bundle
 ```
 
-La v26.10.2 mantiene invariati il motore immagini locale, il backend Rust e i comportamenti della precedente release. Questa release adotta lo standard di versioning `_davstudios` `YY.M.REVISIONE`, standardizza i metadata del pacchetto e introduce la descrizione bilingue automatica delle GitHub Release.
+La v26.10.3 mantiene invariati il motore immagini locale, il backend Rust e i comportamenti della precedente release. Questa release completa la repository normalization dei file testuali, applica regole EOL deterministiche e rafforza la sincronizzazione della versione includendo package-lock.json e Cargo.lock con compatibilità LF/CRLF.
 
 ## Metadata bundle
 
@@ -49,3 +49,4 @@ L'elaborazione delle GIF animate resta intenzionalmente non disponibile per evit
 ## Icone bundle
 
 Il set di icone Tauri esistente viene preservato senza modifiche.
+

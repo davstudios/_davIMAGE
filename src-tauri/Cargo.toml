@@ -1,6 +1,6 @@
 [package]
 name = "davimage"
-version = "26.10.2"
+version = "26.10.3"
 description = "_davIMAGE — local batch image toolbox for Windows, macOS and Linux by _davstudios."
 authors = ["_davstudios"]
 license = "MIT"
@@ -28,3 +28,4 @@ kamadak-exif = "0.6.1"
 image = { version = "0.25", features = ["avif", "bmp", "gif", "jpeg", "png", "tiff", "webp"] }
 webp = "0.3"
 base64 = "0.22"
+

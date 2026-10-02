@@ -5,7 +5,7 @@
 **Toolbox immagini locale, veloce e multipiattaforma.**  
 **A fast, local and cross-platform image toolbox.**
 
-`v26.10.2`
+`v26.10.3`
 
 [Italiano](#italiano) · [English](#english)
 
@@ -102,7 +102,7 @@ Scarica sempre le release dalla repository GitHub ufficiale di `_davstudios`. Qu
 - Homepage: https://davstudios.it
 - Licenza: MIT
 - Bundle identifier: `studio.dav.image`
-- Versione corrente: `26.10.2`
+- Versione corrente: `26.10.3`
 
 ### Piattaforme
 
@@ -123,7 +123,7 @@ Sono inclusi anche gli script `RUN-*` e `BUILD-*` specifici per sistema operativ
 
 ### Note della release
 
-La v26.10.2 adotta il nuovo standard di versioning e packaging `_davstudios` senza modificare il motore di elaborazione immagini. La v1.0.0 rimane la prima release stabile di `_davIMAGE`; tra le aree future restano l'estensione del supporto HEIC/HEIF, l'elaborazione GIF animata e una gestione metadata ancora più avanzata.
+La v26.10.3 mantiene lo standard di versioning e packaging `_davstudios`, completa la repository normalization dei file testuali e rafforza i controlli multipiattaforma della versione senza modificare il motore di elaborazione immagini. La v1.0.0 rimane la prima release stabile di `_davIMAGE`; tra le aree future restano l'estensione del supporto HEIC/HEIF, l'elaborazione GIF animata e una gestione metadata ancora più avanzata.
 
 [↑ Torna in alto](#davimage)
 
@@ -218,7 +218,7 @@ Always download releases from the official `_davstudios` GitHub repository. When
 - Homepage: https://davstudios.it
 - License: MIT
 - Bundle identifier: `studio.dav.image`
-- Current version: `26.10.2`
+- Current version: `26.10.3`
 
 ### Platforms
 
@@ -239,7 +239,7 @@ Platform-specific `RUN-*` and `BUILD-*` scripts are included as well.
 
 ### Release notes
 
-v26.10.2 adopts the new `_davstudios` versioning and packaging standard without changing the image-processing engine. v1.0.0 remains the first stable `_davIMAGE` release; planned areas for future updates still include broader HEIC/HEIF support, animated GIF processing and more advanced metadata handling.
+v26.10.3 retains the `_davstudios` versioning and packaging standard, completes repository normalization across text files and strengthens cross-platform version checks without changing the image-processing engine. v1.0.0 remains the first stable `_davIMAGE` release; planned areas for future updates still include broader HEIC/HEIF support, animated GIF processing and more advanced metadata handling.
 
 [↑ Back to top](#davimage)
 
@@ -250,3 +250,4 @@ v26.10.2 adopts the new `_davstudios` versioning and packaging standard without 
 Built by **_davstudios** · MIT License
 
 </div>
+

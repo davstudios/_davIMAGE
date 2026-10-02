@@ -1,5 +1,13 @@
 # Changelog
 
+## 26.10.3
+
+- Eseguita la repository normalization di tutti i file testuali del progetto con regole EOL/EOF deterministiche.
+- Rafforzato il controllo della versione includendo `package-lock.json` e `Cargo.lock`.
+- Aggiunta compatibilità esplicita con checkout Windows CRLF nel parser di `Cargo.lock`.
+- Preservato byte-per-byte il set di icone introdotto nella v26.10.2.
+- Nessuna modifica al motore immagini, al backend Rust, ai formati supportati o all'interfaccia.
+
 ## 26.10.2
 - Updated the complete Tauri icon set in `src-tauri/icons` using the new official `icon.ico` asset.
 - Regenerated `32x32.png`, `128x128.png`, `128x128@2x.png`, `app-icon.png`, `icon.ico` and `icon.icns` to keep all app icons visually aligned across Windows, macOS and Linux.
@@ -43,3 +51,4 @@ First stable release of `_davIMAGE`.
 - New `_davIMAGE` icon set for Windows, macOS and Linux.
 - Windows, macOS and Linux project configuration.
 - Source comment audit test.
+

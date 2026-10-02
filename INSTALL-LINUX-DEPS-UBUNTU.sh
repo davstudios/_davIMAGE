@@ -14,3 +14,4 @@ sudo apt-get install -y \
   libssl-dev
 
 echo "Dipendenze Linux per _davIMAGE installate. Installa anche Node.js e Rust se non sono già presenti."
+

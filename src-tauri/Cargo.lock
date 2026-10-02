@@ -811,7 +811,7 @@ dependencies = [
 
 [[package]]
 name = "davimage"
-version = "26.10.2"
+version = "26.10.3"
 dependencies = [
  "base64 0.22.1",
  "chrono",
@@ -5920,3 +5920,4 @@ dependencies = [
  "syn 3.0.5",
  "winnow 1.0.4",
 ]
+

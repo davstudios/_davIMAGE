@@ -10,3 +10,4 @@ fi
 npm install --no-audit --no-fund
 echo "Avvio _davIMAGE..."
 npm run desktop
+

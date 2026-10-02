@@ -1,7 +1,7 @@
-_davIMAGE v26.10.2 — Test report
-Date: 2026-10-01
+_davIMAGE v26.10.3 — Test report
+Date: 2026-10-02
 
-Automated tests: 20/20 passed
+Automated tests: 21/21 passed
 - Image engine: passed
 - Project/release contract: passed
 - GitHub Release description automation contract: passed
@@ -20,8 +20,8 @@ Static validation:
 - .github/workflows/release.yml: valid YAML
 
 Bundle metadata:
-- Version: 26.10.2
-- Public tag: v26.10.2
+- Version: 26.10.3
+- Public tag: v26.10.3
 - Publisher: _davstudios
 - Homepage: https://davstudios.it
 - License: MIT
@@ -45,4 +45,8 @@ Native build:
 - The native Tauri/Rust bundle was not compiled in this environment because Cargo is not installed.
 - GitHub Actions remains responsible for native Windows, macOS and Linux release builds.
 
-- Notes: Updated the complete Tauri icon set from the new official icon source and verified the app icon files are present.
+Repository normalization:
+- All pre-existing text files were normalized with deterministic LF content and a neutral EOF marker for this release.
+- Binary PNG/ICO/ICNS assets were preserved byte-for-byte from v26.10.2.
+- Cargo.lock synchronization supports both LF and Windows CRLF checkouts.
+

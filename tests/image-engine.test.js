@@ -53,3 +53,4 @@ test('longest-side resize uses target', () => {
   const options = { ...defaultOptions(), resizeMode: 'longest', width: 1600 };
   assert.deepEqual(resizePreview(3200, 1800, options), [1600, 900]);
 });
+

@@ -680,3 +680,4 @@ pub fn thumbnail_image(path: String) -> Result<String, String> {
     }
     Ok(format!("data:image/jpeg;base64,{}", base64::engine::general_purpose::STANDARD.encode(bytes)))
 }
+

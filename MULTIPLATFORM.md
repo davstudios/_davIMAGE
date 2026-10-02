@@ -1,6 +1,6 @@
 # Supporto multipiattaforma
 
-`_davIMAGE v26.10.2` usa una singola codebase Tauri 2 per Windows, macOS e Linux. L'elaborazione immagini avviene localmente nel backend Rust.
+`_davIMAGE v26.10.3` usa una singola codebase Tauri 2 per Windows, macOS e Linux. L'elaborazione immagini avviene localmente nel backend Rust.
 
 ## Windows
 
@@ -25,3 +25,4 @@ La build macOS Universal include Intel e Apple Silicon nello stesso pacchetto.
 ## Privacy e rete
 
 Le immagini vengono elaborate sul dispositivo. L'app non invia i file a server esterni per eseguire le operazioni di elaborazione.
+
